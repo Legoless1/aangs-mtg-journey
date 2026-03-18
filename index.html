@@ -1,0 +1,369 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aang's MTG Journey</title>
+<link rel="icon" href="assets/favicons/avatar-minimal.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="shortcut icon" href="assets/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Aang's MTG Journey RSS Feed" href="feed.xml">
+<meta name="theme-color" content="#1f5679">
+<style>
+:root{--bg:#f6f2e9;--card:#fffdf7;--text:#1f1d18;--muted:#645f54;--line:#d8d0bd;--link:#1f5679;--accent:#8e5527;--code:#efe7d7;--w:780px}
+:root[data-theme='dark']{--bg:#141518;--card:#1b1e22;--text:#ecebe5;--muted:#aaa79d;--line:#343842;--link:#9dcbe8;--accent:#f0be88;--code:#0f1116}
+*{box-sizing:border-box}body{margin:0;padding:1rem;background:radial-gradient(circle at 80% -20%,#b2895f22,transparent 35%),radial-gradient(circle at -20% 40%,#1f567922,transparent 40%),var(--bg);color:var(--text);font:19px/1.7 "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",serif}
+.wrap{max-width:var(--w);margin:auto;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+header{padding:1.2rem 1.3rem .7rem;border-bottom:1px solid var(--line)}
+.top{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start}.identity{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.brand{display:flex;align-items:center;justify-content:flex-start;gap:.55rem}.inline-icon{display:block;max-width:none;margin:0;border-radius:0}#siteLogo{width:48px;height:48px;flex:0 0 48px}h1{margin:0;font-size:clamp(1.8rem,3.8vw,2.4rem);line-height:1.2}h1 a{text-decoration:none;color:inherit}
+#desc{margin:.35rem 0 0;color:var(--muted);font:0.98rem/1.5 "Avenir Next","Segoe UI",sans-serif}
+button,input,nav,.meta,.pill,.pager,footer{font-family:"Avenir Next","Segoe UI",sans-serif}
+#theme{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:999px;padding:.38rem .72rem;cursor:pointer}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem .85rem;margin-top:.85rem;font-size:.92rem}nav a{display:inline-flex;align-items:center;color:var(--link);text-decoration:none;border-bottom:1px solid transparent;line-height:1.2;padding-bottom:.14rem}nav a:hover,nav a.active{color:var(--accent);border-bottom-color:currentColor}.nav-feed{gap:.16rem}.nav-feed-icon{width:14px;height:14px;flex:0 0 14px}
+#pageLinks{margin-top:.25rem;color:var(--muted);font:.82rem "Avenir Next","Segoe UI",sans-serif}
+#pageLinks a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--line)}
+.search{padding:0 1.3rem .95rem;border-bottom:1px solid var(--line)}
+#searchForm{display:grid;grid-template-columns:1fr auto;gap:.55rem;margin-top:.75rem}
+#q{border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);padding:.55rem .65rem;font-size:.92rem}
+#searchForm button{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:8px;padding:.55rem .8rem;cursor:pointer}
+main{padding:1.15rem 1.3rem 1.8rem;min-height:320px}
+a{color:var(--link)}a:hover{color:var(--accent)}
+article{margin-bottom:1.3rem;padding-bottom:1.1rem;border-bottom:1px solid var(--line)}article:last-child{border-bottom:0;margin-bottom:0}
+article h2,article h1{margin:0;line-height:1.3}
+.meta{color:var(--muted);font-size:.88rem}.tags{display:flex;flex-wrap:wrap;gap:.3rem .4rem;margin-top:.35rem}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.08rem .45rem;font-size:.8rem;text-decoration:none;color:var(--link)}
+.pill:hover{color:var(--accent);border-color:var(--accent)}
+.meta .permalink{display:inline-block;margin-left:.45rem;padding:.05rem .45rem;border:1px solid var(--line);border-radius:999px;background:var(--bg);text-decoration:none;font-size:.82rem;line-height:1.4}
+.meta .permalink:hover{border-color:var(--accent)}
+pre,code{font-family:Consolas,"Courier New",monospace}code{background:var(--code);border:1px solid var(--line);padding:.04rem .2rem;border-radius:5px}
+pre{background:var(--code);border:1px solid var(--line);padding:.75rem .85rem;border-radius:10px;overflow:auto}pre code{border:0;padding:0}
+blockquote{margin:1rem 0;padding:.12rem .9rem;border-left:4px solid var(--line);background:#8882;color:var(--muted)}
+img{max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem auto}.img-wrap{margin:1rem auto;max-width:100%}.img-wrap img{margin:0 auto;max-width:100%;width:var(--img-w,auto);height:var(--img-h,auto)}.img-wrap.img-thumb{max-width:min(100%,var(--img-w,260px))}.img-wrap figcaption{margin:.35rem auto 0;max-width:100%;color:var(--muted);font:.82rem "Avenir Next","Segoe UI",sans-serif;text-align:center}.img-wrap.row-half{display:inline-block;vertical-align:top;width:calc(50% - 1rem);margin:1rem .3rem}.img-wrap.row-half img{width:100%}
+.list{list-style:none;padding:0;margin:.55rem 0 0}.list li{padding:.48rem 0;border-bottom:1px solid var(--line)}.list li:last-child{border-bottom:0}
+.pager{display:flex;justify-content:space-between;gap:.8rem;border-top:1px solid var(--line);padding-top:.8rem;margin-top:1rem;font-size:.9rem}
+.home-jump{margin:0 0 1rem}.home-jump a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.42rem .8rem;background:var(--bg);text-decoration:none;font:.88rem "Avenir Next","Segoe UI",sans-serif}
+.adj{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.2rem;padding-top:.8rem;border-top:1px solid var(--line);font:.9rem "Avenir Next","Segoe UI",sans-serif}
+.adj a,.adj .none{display:block;border:1px solid var(--line);border-radius:9px;padding:.5rem .58rem;text-decoration:none}
+.adj small{display:block;color:var(--muted)}
+.comments{margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line)}
+.comments h2{margin:0 0 .45rem;line-height:1.3}
+.comments .meta{margin:0 0 .85rem}
+.guestbook-page article{margin-bottom:0;padding-bottom:0;border-bottom:0}
+.comments.comments-page{margin:1.4rem -1.3rem 0;padding:1.15rem 1.3rem 1.3rem;border-top:1px solid var(--line);background:linear-gradient(180deg,#9991,transparent 22%)}
+.comments.comments-page #cusdis_thread{min-height:clamp(32rem,78vh,64rem);border-radius:12px;overflow:hidden}
+.comments.comments-page #cusdis_thread iframe{display:block!important;width:100%!important;height:clamp(32rem,78vh,64rem)!important;min-height:32rem!important;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--card)!important}
+.box{border:1px solid var(--line);border-radius:10px;padding:.66rem .78rem;background:#9991;font:.9rem "Avenir Next","Segoe UI",sans-serif}
+.err{border-color:#a65a5a;background:#a65a5a1a}.warn{border-color:#a08442;background:#a084421a}
+#local{margin-top:.75rem}#local button{margin-top:.45rem;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:8px;padding:.45rem .68rem;cursor:pointer}
+mark{background:#f2c68b66;padding:0 .08em;border-radius:4px}
+footer{border-top:1px solid var(--line);padding:.75rem 1.3rem .95rem;color:var(--muted);font-size:.83rem;background:#9991}
+@media (max-width:640px){body{padding:.5rem;font-size:18px}.top{flex-direction:column}#searchForm{grid-template-columns:1fr}.adj{grid-template-columns:1fr}.img-wrap.row-half{display:block;width:100%;margin:1rem auto}.comments.comments-page{margin-left:-1rem;margin-right:-1rem;padding-left:1rem;padding-right:1rem}.comments.comments-page #cusdis_thread{min-height:clamp(28rem,72vh,48rem)}.comments.comments-page #cusdis_thread iframe{height:clamp(28rem,72vh,48rem)!important;min-height:28rem!important}header,.search,main,footer{padding-left:1rem;padding-right:1rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <div class="identity">
+      <div class="brand">
+        <img id="siteLogo" class="inline-icon" src="assets/images/site-logo.svg" alt="Aang's MTG Journey logo">
+        <h1><a id="homeLink" href="#/">Aang's MTG Journey</a></h1>
+      </div>
+      <p id="desc">Attempting to complete a full grandmaster set of Magic: The Gathering Avatar: The Last Airbender Universes Beyond cards.</p>
+    </div>
+    <button id="theme" type="button">Theme: Auto</button>
+  </div>
+  <nav id="nav"></nav>
+  <div id="pageLinks"></div>
+</header>
+<div class="search">
+  <form id="searchForm" role="search">
+    <input id="q" type="search" name="q" placeholder="Search title, tags, body">
+    <button type="submit">Search</button>
+  </form>
+  <section id="local" class="box" hidden>
+    <strong>Local file mode:</strong>
+    <p id="localMsg">Choose the blog folder if the browser blocks file:// fetch.</p>
+    <button id="pick" type="button">Select blog folder</button>
+    <input id="dir" type="file" webkitdirectory directory multiple hidden>
+  </section>
+</div>
+<main id="app" tabindex="-1"></main>
+<footer id="foot"></footer>
+</div>
+<script>
+(()=>{
+'use strict';
+const CFG={
+  siteTitle:'Aang\'s MTG Journey',siteDescription:'Attempting to complete a full grandmaster set of Magic: The Gathering Avatar: The Last Airbender Universes Beyond cards.',siteUrl:'https://legoless1.github.io/aangs-mtg-journey',
+  postsManifest:'posts/posts.json',pagesManifest:'pages/pages.json',postsDir:'posts',pagesDir:'pages',assetsDir:'assets',
+  perPage:10,excerptLen:220,rssItems:25,rssFull:false,themeToggle:true,pageLinksMax:8,
+  commentHost:'https://cusdis.com',commentAppId:'8686531d-45d7-40f6-b22c-4e6fe65a0c2a',commentScript:'https://cusdis.com/js/cusdis.es.js',
+  commentNote:'Want to leave a note? Use the Guestbook page.',commentModerationNote:'Comments are moderated before they appear.',guestbookIntro:'Leave a note, ask a question, or share a collecting story. Friendly messages are welcome.'
+};
+const NAV=[['Home','#/'],['About','#/page/about'],['Guestbook','#/page/guestbook'],['Pages','#/pages'],['Archive','#/archive'],['Tags','#/tags'],['Feed','feed.xml']];
+const S={posts:[],pages:[],pb:new Map(),gb:new Map(),pc:new Map(),gc:new Map(),tags:new Map(),authors:new Map(),arc:new Map(),search:[],searchReady:false,local:null,warn:[],feedUrl:null};
+const D={
+  app:document.getElementById('app'),nav:document.getElementById('nav'),links:document.getElementById('pageLinks'),
+  title:document.getElementById('homeLink'),desc:document.getElementById('desc'),foot:document.getElementById('foot'),
+  form:document.getElementById('searchForm'),q:document.getElementById('q'),theme:document.getElementById('theme'),
+  local:document.getElementById('local'),localMsg:document.getElementById('localMsg'),pick:document.getElementById('pick'),dir:document.getElementById('dir')
+};
+const DF=new Intl.DateTimeFormat(undefined,{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
+const MF=new Intl.DateTimeFormat(undefined,{month:'long',timeZone:'UTC'});
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const escA=s=>esc(s).replace(/`/g,'&#96;');
+const xesc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[m]));
+const dec=s=>{try{return decodeURIComponent(s)}catch{return s}};
+const npath=s=>String(s||'').replace(/\\/g,'/').replace(/^\.?\//,'').replace(/^\/+/, '').toLowerCase();
+const nslug=s=>String(s||'').trim().toLowerCase().replace(/[^a-z0-9-_/]/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+const ntags=v=>Array.isArray(v)?v.map(String).map(t=>t.trim()).filter(Boolean):typeof v==='string'?(v.trim().replace(/^\[|\]$/g,'').split(',').map(t=>t.trim()).filter(Boolean)):[];
+const pbool=v=>/^(1|true|yes|on|cusdis)$/i.test(String(v||'').trim());
+const pdate=s=>/^\d{4}-\d{2}-\d{2}$/.test(String(s||''))?(d=>Number.isNaN(d)?null:d)(new Date(String(s)+'T00:00:00Z')):null;
+const fdate=d=>DF.format(d),fmonth=m=>MF.format(new Date(Date.UTC(2000,Number(m)-1,1))),clamp=(n,min,max)=>Math.min(max,Math.max(min,n));
+let cusdisScriptPromise=null;
+function parseFM(raw){
+  const t=String(raw||'').replace(/\r\n?/g,'\n');
+  const parse=ls=>{const o={};for(const ln of ls){const m=ln.match(/^([A-Za-z][A-Za-z0-9_-]*)\s*:\s*(.*)$/);if(m)o[m[1].toLowerCase()]=m[1].toLowerCase()==='tags'?ntags(m[2].trim()):m[2].trim()}return o};
+  if(t.startsWith('---\n')){const i=t.indexOf('\n---\n',4);if(i!==-1)return{meta:parse(t.slice(4,i).split('\n')),body:t.slice(i+5)}}
+  const ls=t.split('\n'),fm=[];let i=0;while(i<ls.length){if(!ls[i].trim()){i++;break}if(/^[A-Za-z][A-Za-z0-9_-]*\s*:/.test(ls[i]))fm.push(ls[i++]);else break}
+  return fm.length>=2?{meta:parse(fm),body:ls.slice(i).join('\n')}:{meta:{},body:t};
+}
+function parseCommentMeta(meta){
+  const get=k=>String(meta[k]||'').trim();
+  return{
+    enabled:pbool(meta.comments),
+    id:get('comment-id')||get('comment_id')||get('commentid'),
+    url:get('comment-url')||get('comment_url')||get('commenturl'),
+    title:get('comment-title')||get('comment_title')||get('commenttitle')
+  };
+}
+function safeUrl(u){u=String(u||'').trim();if(!u||/^javascript:/i.test(u))return '#';if(/^(https?:|data:|mailto:|tel:|#|\/\/)/i.test(u))return u;const clean=u.replace(/^\/+/, '');try{return new URL(clean,location.href.replace(/[?#].*$/,'')).href}catch{return clean}}
+function mediaUrl(u){return safeUrl(u)}
+function extUrl(u){return /^https?:\/\//i.test(u)}
+function cleanDim(v){v=String(v||'').trim().toLowerCase();if(!v||v==='auto')return'auto';if(/^\d+$/.test(v))return `${Math.min(Number(v),4096)}px`;if(/^\d+(\.\d+)?(px|%|vw|vh|rem|em)$/.test(v))return v;return''}
+function parseSizeToken(tok){tok=String(tok||'').trim();if(!tok)return{w:'',h:''};if(/^=/.test(tok))tok=tok.slice(1);const m=tok.match(/^([0-9.]+(?:px|%|vw|vh|rem|em)?)?x([0-9.]+(?:px|%|vw|vh|rem|em)?)?$/i);if(m)return{w:cleanDim(m[1]||''),h:cleanDim(m[2]||'')};return{w:cleanDim(tok),h:''}}
+const unescAttr=s=>String(s||'').replace(/\\(["'\\])/g,'$1');
+function parseAttrBlock(raw){const out={};if(!raw)return out;const r=/([a-zA-Z][\w-]*)\s*=\s*("(?:\\.|[^"])*"|'(?:\\.|[^'])*'|[^\s}]+)/g;let m;while((m=r.exec(raw))){let v=m[2].trim();if((v.startsWith('"')&&v.endsWith('"'))||(v.startsWith("'")&&v.endsWith("'")))v=unescAttr(v.slice(1,-1));else v=unescAttr(v);out[m[1].toLowerCase()]=v}if(/\bthumb\b/i.test(raw)&&!('thumb' in out))out.thumb='true';return out}
+function safeClass(v){return String(v||'').split(/\s+/).map(x=>x.trim()).filter(x=>/^[a-zA-Z0-9_-]{1,40}$/.test(x)).join(' ')}
+function renderImg(o){const src=escA(mediaUrl(o.src||'')),alt=escA(o.alt||''),title=o.title?` title="${escA(o.title)}"`:'';const w=cleanDim(o.w||''),h=cleanDim(o.h||''),cls=safeClass(o.cls||''),thumb=!!o.thumb;const figureCls=['img-wrap',thumb?'img-thumb':'',cls].filter(Boolean).join(' ');const vars=[];if(w&&w!=='auto')vars.push(`--img-w:${w}`);if(h&&h!=='auto')vars.push(`--img-h:${h}`);const style=vars.length?` style="${escA(vars.join(';'))}"`:'';const img=`<img src="${src}" alt="${alt}"${title} loading="lazy" decoding="async">`;const cap=o.caption?`<figcaption>${inl(String(o.caption))}</figcaption>`:'';const body=o.link?`<a href="${escA(mediaUrl(o.link))}"${extUrl(o.link)?' target="_blank" rel="noopener noreferrer"':''}>${img}</a>`:img;return `<figure class="${figureCls}"${style}>${body}${cap}</figure>`}
+function parseMdImg(inner){let s=String(inner||'').trim(),title='';const t1=s.match(/\s+"([^"]*)"\s*$/);const t2=!t1?s.match(/\s+'([^']*)'\s*$/):null;if(t1){title=t1[1];s=s.slice(0,t1.index).trim()}else if(t2){title=t2[1];s=s.slice(0,t2.index).trim()}let size='';const sm=s.match(/\s*=\s*([^\s]+)\s*$/);if(sm){size=sm[1];s=s.slice(0,sm.index).trim()}const src=(s.split(/\s+/)[0]||'').trim();const dims=parseSizeToken(size);return{src,title,w:dims.w,h:dims.h}}
+function parseWikiImg(src,optRaw){const opts=(optRaw?optRaw.split('|'):[]).map(x=>x.trim()).filter(Boolean);const o={src,alt:'',title:'',w:'',h:'',thumb:false,caption:'',link:'',cls:''};for(const p of opts){const lo=p.toLowerCase();if(/^(thumb|thumbnail|frame)$/.test(lo)){o.thumb=true;continue}if(/^alt=/.test(lo)){o.alt=p.slice(4).trim();continue}if(/^class=/.test(lo)){o.cls=p.slice(6).trim();continue}if(/^link=/.test(lo)){o.link=p.slice(5).trim();continue}if(/^caption=/.test(lo)){o.caption=p.slice(8).trim();continue}const wh=p.match(/^(\d+)(?:x(\d+))?px$/i);if(wh){o.w=wh[1]+'px';if(wh[2])o.h=wh[2]+'px';continue}const xh=p.match(/^x(\d+)px$/i);if(xh){o.h=xh[1]+'px';continue}if(!o.caption)o.caption=p}if(!o.alt)o.alt=o.caption||'';return o}
+function inl(s){let t=String(s||''),codes=[],imgs=[],brs=[];const put=h=>{const k='@@I'+imgs.length+'@@';imgs.push(h);return k},putBr=()=>{const k='@@B'+brs.length+'@@';brs.push('<br>');return k};t=t.replace(/`([^`]+)`/g,(_,c)=>{const k='@@C'+codes.length+'@@';codes.push(c);return k});t=t.replace(/\[\[(?:File|Image):([^\]|]+)(?:\|([^\]]+))?\]\]/gi,(_,src,opt)=>put(renderImg(parseWikiImg(src,opt||''))));t=t.replace(/!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,(_,a,inner,attr)=>{const m=parseMdImg(inner),attrs=parseAttrBlock(attr||'');const dims=parseSizeToken(attrs.size||'');return put(renderImg({src:m.src,alt:a||attrs.alt||'',title:m.title,w:attrs.width||dims.w||m.w,h:attrs.height||dims.h||m.h,thumb:/^(1|true|yes)$/i.test(String(attrs.thumb||'')),caption:attrs.caption||'',link:attrs.link||'',cls:attrs.class||''}))});t=t.replace(/<br\s*\/?>/gi,()=>putBr()).replace(/ {2,}\n/g,()=>putBr()).replace(/\\\n/g,()=>putBr());t=esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)(?:\s+"([^"]+)")?\)/g,(_,l,u,ti)=>`<a href="${escA(safeUrl(u))}"${extUrl(u)?' target="_blank" rel="noopener noreferrer"':''}${ti?` title="${escA(ti)}"`:''}>${l}</a>`).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>').replace(/~~(.+?)~~/g,'<del>$1</del>').replace(/\n/g,' ');t=t.replace(/@@I(\d+)@@/g,(_,i)=>imgs[Number(i)]||'').replace(/@@B(\d+)@@/g,(_,i)=>brs[Number(i)]||'<br>');return t.replace(/@@C(\d+)@@/g,(_,i)=>`<code>${esc(codes[Number(i)]||'')}</code>`)}
+const isBlk=l=>/^\s*(```|#{1,6}\s+|>\s?|[-*+]\s+|\d+\.\s+|([-*_])\2{2,}\s*$)/.test(String(l||''));
+function md2html(md){
+  const ls=String(md||'').replace(/\r\n?/g,'\n').split('\n'),out=[];let i=0,list='';
+  const close=()=>{if(list){out.push(`</${list}>`);list=''}};
+  while(i<ls.length){const l=ls[i],t=l.trim();if(!t){close();i++;continue}
+    if(/^```/.test(t)){close();const lang=t.slice(3).trim();i++;const c=[];while(i<ls.length&&!/^```/.test(ls[i].trim()))c.push(ls[i++]);if(i<ls.length)i++;out.push(`<pre><code${lang?` class="language-${escA(lang)}"`:''}>${esc(c.join('\n'))}</code></pre>`);continue}
+    const h=l.match(/^\s*(#{1,6})\s+(.*)$/);if(h){close();out.push(`<h${h[1].length}>${inl(h[2])}</h${h[1].length}>`);i++;continue}
+    if(/^\s*([-*_])\1{2,}\s*$/.test(l)){close();out.push('<hr>');i++;continue}
+    if(/^\s*>\s?/.test(l)){close();const q=[];while(i<ls.length&&/^\s*>\s?/.test(ls[i]))q.push(ls[i++].replace(/^\s*>\s?/,''));out.push(`<blockquote>${md2html(q.join('\n'))}</blockquote>`);continue}
+    const ul=l.match(/^\s*[-*+]\s+(.*)$/),ol=l.match(/^\s*\d+\.\s+(.*)$/);
+    if(ul||ol){const nt=ul?'ul':'ol';if(list&&list!==nt){out.push(`</${list}>`);list=''}if(!list){list=nt;out.push(`<${list}>`)}const it=[(ul?ul[1]:ol[1]).replace(/^\s+/,'')];i++;while(i<ls.length&&/^\s{2,}\S/.test(ls[i])&&!/^\s*[-*+]\s+/.test(ls[i])&&!/^\s*\d+\.\s+/.test(ls[i]))it.push(ls[i++].replace(/^\s+/,''));out.push(`<li>${inl(it.join('\n'))}</li>`);continue}
+    close();const p=[l.replace(/^\s+/,'')];i++;while(i<ls.length&&ls[i].trim()&&!isBlk(ls[i]))p.push(ls[i++].replace(/^\s+/,''));out.push(`<p>${inl(p.join('\n'))}</p>`)
+  }
+  close();return out.join('\n')
+}
+function imgTxt(parts){return parts.map(v=>String(v||'').trim()).filter(Boolean).join(' ')}
+function md2txt(md){return String(md||'')
+  .replace(/```[\s\S]*?```/g,' ')
+  .replace(/`[^`]*`/g,' ')
+  .replace(/\[\[(?:File|Image):([^\]|]+)(?:\|([^\]]+))?\]\]/gi,(_,src,opt)=>{const o=parseWikiImg(src,opt||'');return ' '+imgTxt([o.alt,o.caption,o.title])+' '})
+  .replace(/!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,(_,alt,inner,attr)=>{const m=parseMdImg(inner||''),a=parseAttrBlock(attr||'');return ' '+imgTxt([alt,a.alt,a.caption,m.title])+' '})
+  .replace(/<br\s*\/?>/gi,' ')
+  .replace(/\\\n/g,' ')
+  .replace(/\[([^\]]+)\]\([^)]+\)/g,'$1')
+  .replace(/^#{1,6}\s+/gm,'')
+  .replace(/^>\s?/gm,'')
+  .replace(/[*_~`>-]/g,' ')
+  .replace(/\s+/g,' ')
+  .trim()}
+const excerpt=(t,n)=>{t=String(t||'').trim();return !t?'':t.length<=n?t:t.slice(0,n).replace(/\s+\S*$/,'').trim()+'...'};
+function route(){const raw=(location.hash||'#/').replace(/^#/,'');const [p,q='']= (raw.startsWith('/')?raw:'/'+raw).split('?');return{path:p==='/'?'/':p.replace(/\/+$/,''),seg:(p==='/'?[]:p.replace(/^\//,'').split('/').filter(Boolean)),q:new URLSearchParams(q)}}
+function baseUrl(){if(CFG.siteUrl)return String(CFG.siteUrl).replace(/\/+$/,'');if(location.protocol==='file:')return'';return location.origin+location.pathname.replace(/[^/]*$/,'').replace(/\/+$/,'')}
+function feedHref(){return safeUrl('feed.xml')}
+const ph=s=>`#/post/${encodeURIComponent(s)}`,gh=s=>`#/page/${encodeURIComponent(s)}`,th=t=>`#/tag/${encodeURIComponent(t)}`,ah=a=>`#/author/${encodeURIComponent(a)}`;
+function normHash(h){h=String(h||'#/').trim();if(!h)return'#/';if(h.startsWith('/#/'))return h.slice(1);if(h.startsWith('#/'))return h;if(h.startsWith('#'))return h;return `#/${h.replace(/^\/+/,'')}`}
+function commentUrl(hash){const h=normHash(hash||'#/'),base=baseUrl();if(base)return `${base}/${h}`;try{const u=new URL(location.href.replace(/[?#].*$/,''));u.hash=h.slice(1);return u.toString()}catch{return location.href}}
+function commentCfg(kind,entry,title,meta){if(!(meta&&meta.enabled&&CFG.commentAppId))return null;const guestbook=kind==='page'&&entry.slug==='guestbook';return{pageId:meta.id||`${kind}:${entry.slug}`,pageUrl:commentUrl(meta.url||entry.hash),pageTitle:meta.title||title,variant:guestbook?'guestbook':'default'}}
+function commentBox(meta){if(!meta)return'';const cls=`comments${meta.variant==='guestbook'?' comments-page':''}`;const heading=meta.variant==='guestbook'?'Sign the Guestbook':'Comments';const intro=meta.variant==='guestbook'&&CFG.guestbookIntro?`<p class="meta">${esc(CFG.guestbookIntro)}</p>`:'';return `<section class="${cls}"><h2>${esc(heading)}</h2>${intro}${CFG.commentModerationNote?`<p class="meta">${esc(CFG.commentModerationNote)}</p>`:''}<div id="cusdis_thread" data-host="${escA(CFG.commentHost)}" data-app-id="${escA(CFG.commentAppId)}" data-page-id="${escA(meta.pageId)}" data-page-url="${escA(meta.pageUrl)}" data-page-title="${escA(meta.pageTitle)}"></div></section>`}
+async function ensureCusdis(){
+  if(!CFG.commentAppId)return;
+  if(window.CUSDIS&&typeof window.CUSDIS.initial==='function')return;
+  if(cusdisScriptPromise)return cusdisScriptPromise;
+  cusdisScriptPromise=new Promise((resolve,reject)=>{
+    const fail=()=>{cusdisScriptPromise=null;reject(Error('Failed to load Cusdis comments.'))};
+    const existing=document.querySelector('script[data-cusdis-script="1"]');
+    if(existing){
+      if(existing.dataset.loaded==='1'){resolve();return}
+      existing.addEventListener('load',resolve,{once:true});
+      existing.addEventListener('error',fail,{once:true});
+      return;
+    }
+    const s=document.createElement('script');
+    s.async=true;
+    s.defer=true;
+    s.src=CFG.commentScript;
+    s.dataset.cusdisScript='1';
+    s.addEventListener('load',()=>{s.dataset.loaded='1';resolve()},{once:true});
+    s.addEventListener('error',fail,{once:true});
+    document.body.appendChild(s);
+  });
+  return cusdisScriptPromise;
+}
+async function mountComments(meta){
+  if(!meta)return;
+  const root=document.getElementById('cusdis_thread');
+  if(!root)return;
+  root.innerHTML='';
+  try{
+    await ensureCusdis();
+    if(root.isConnected&&window.CUSDIS&&typeof window.CUSDIS.initial==='function')window.CUSDIS.initial();
+  }catch(e){
+    root.insertAdjacentHTML('beforebegin',`<p class="box warn">${esc(e.message)}</p>`);
+  }
+}
+function warn(msg){S.warn.push(String(msg))}
+function regLocal(m,p,f){const c=String(p||'').replace(/\\/g,'/').replace(/^\/+/,''),a=c.split('/');for(let i=0;i<Math.min(a.length,4);i++){const k=npath(a.slice(i).join('/'));if(!m.has(k))m.set(k,f)}}
+async function readText(p){p=String(p||'').replace(/\\/g,'/').replace(/^\.?\//,'');if(S.local){const f=S.local.get(npath(p));if(!f)throw Error('Local file missing: '+p);return f.text()}const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw Error(`Failed to load ${p} (${r.status})`);return r.text()}
+async function readJSON(p){const t=await readText(p);try{return JSON.parse(t)}catch(e){throw Error(`Invalid JSON in ${p}: ${e.message}`)}}
+function normPost(e,i,seen){if(!e||typeof e!=='object'){warn(`posts.json entry #${i+1} is not an object.`);return null}
+  const slug=nslug(e.slug||''),file=String(e.file||'').trim(),dt=String(e.date||'').trim(),d=pdate(dt),title=String(e.title||e.slug||'Untitled').trim(),tags=ntags(e.tags),author=String(e.author||'Legoless').trim()||'Legoless',ex=e.excerpt?String(e.excerpt).trim():'';
+  if(!slug||!file||!d){warn(`posts.json entry #${i+1} is missing required fields.`);return null}
+  if(seen.has(slug)){warn(`Duplicate post slug '${slug}' ignored.`);return null}seen.add(slug);
+  return{slug,file,title,dateText:dt,dateObj:d,year:String(d.getUTCFullYear()),month:String(d.getUTCMonth()+1).padStart(2,'0'),tags,author,excerpt:ex,hash:ph(slug)}
+}
+function normPage(e,i,seen){if(!e||typeof e!=='object'){warn(`pages.json entry #${i+1} is not an object.`);return null}
+  const slug=nslug(e.slug||''),file=String(e.file||'').trim(),title=String(e.title||e.slug||'Untitled Page').trim();
+  if(!slug||!file){warn(`pages.json entry #${i+1} is missing required fields.`);return null}
+  if(seen.has(slug)){warn(`Duplicate page slug '${slug}' ignored.`);return null}seen.add(slug);return{slug,file,title,hash:gh(slug)}
+}
+function buildIdx(){S.pb=new Map();S.gb=new Map();S.tags=new Map();S.authors=new Map();S.arc=new Map();
+  for(const p of S.posts){S.pb.set(p.slug,p);if(!S.arc.has(p.year))S.arc.set(p.year,{year:p.year,posts:[],months:new Map()});const y=S.arc.get(p.year);y.posts.push(p);if(!y.months.has(p.month))y.months.set(p.month,[]);y.months.get(p.month).push(p);for(const t of p.tags){const k=t.toLowerCase();if(!S.tags.has(k))S.tags.set(k,{label:t,posts:[]});S.tags.get(k).posts.push(p)}const a=p.author.toLowerCase();if(!S.authors.has(a))S.authors.set(a,{label:p.author,posts:[]});S.authors.get(a).posts.push(p)}
+  for(const g of S.pages)S.gb.set(g.slug,g)
+}
+async function loadManifests(){S.warn=[];S.pc.clear();S.gc.clear();S.search=[];S.searchReady=false;
+  const [rp,rg]=await Promise.all([readJSON(CFG.postsManifest),readJSON(CFG.pagesManifest)]);if(!Array.isArray(rp))throw Error(`${CFG.postsManifest} must be an array.`);if(!Array.isArray(rg))throw Error(`${CFG.pagesManifest} must be an array.`);
+  const sp=new Set(),sg=new Set();S.posts=rp.map((e,i)=>normPost(e,i,sp)).filter(Boolean).sort((a,b)=>b.dateObj-a.dateObj||a.slug.localeCompare(b.slug));
+  S.pages=rg.map((e,i)=>normPage(e,i,sg)).filter(Boolean).sort((a,b)=>a.title.localeCompare(b.title));buildIdx()
+}
+async function loadPost(p){if(S.pc.has(p.slug))return S.pc.get(p.slug);const raw=await readText(`${CFG.postsDir}/${p.file}`),fm=parseFM(raw),body=fm.body||'',html=md2html(body),txt=md2txt(body),ex=p.excerpt||excerpt(txt,CFG.excerptLen),obj={title:p.title,dateText:p.dateText,dateObj:p.dateObj,tags:p.tags,author:p.author,html,text:txt,excerpt:ex,comments:parseCommentMeta(fm.meta)};if(!p.excerpt)p.excerpt=obj.excerpt;S.pc.set(p.slug,obj);return obj}
+async function loadPage(g){if(S.gc.has(g.slug))return S.gc.get(g.slug);const raw=await readText(`${CFG.pagesDir}/${g.file}`),fm=parseFM(raw),body=fm.body||'',obj={title:g.title,html:md2html(body),text:md2txt(body),comments:parseCommentMeta(fm.meta)};S.gc.set(g.slug,obj);return obj}
+const titleFor=t=>t?`${t} - ${CFG.siteTitle}`:CFG.siteTitle;
+const tagHtml=tags=>!tags||!tags.length?'':`<div class="tags">${tags.map(t=>`<a class="pill" href="${th(t)}">#${esc(t)}</a>`).join('')}</div>`;
+const authorHtml=author=>`<a href="${ah(author)}">${esc(author)}</a>`;
+const warnBox=()=>!S.warn.length?'':`<div class="box warn"><strong>Manifest warnings:</strong><br>${S.warn.map(esc).join('<br>')}</div>`;
+function setMain(html,title){D.app.innerHTML=html;document.title=titleFor(title);activeNav();window.scrollTo(0,0)}
+function activeNav(){const r=route();for(const a of D.nav.querySelectorAll('a[data-route]')){const b=a.dataset.route,alt=(b==='/tags'&&r.path.startsWith('/tag/'))||(b==='/pages'&&r.path.startsWith('/page/'));a.classList.toggle('active',r.path===b||(b!=='/'&&r.path.startsWith(b+'/'))||alt)}}
+function drawNav(){D.nav.innerHTML=NAV.map(([l,h])=>{const href=h==='feed.xml'?feedHref():h;const cls=h==='feed.xml'?' class="nav-feed"':'';const label=h==='feed.xml'?`<img class="inline-icon nav-feed-icon" src="assets/images/RSS.svg" alt="" aria-hidden="true"><span>${esc(l)}</span>`:esc(l);return `<a href="${href}"${cls}${h.startsWith('#')?` data-route="${escA(h.replace(/^#/,''))}"`:''}>${label}</a>`}).join('');D.links.textContent=''}
+async function ensureEx(posts){await Promise.all(posts.map(async p=>{if(!p.excerpt)try{p.excerpt=(await loadPost(p)).excerpt}catch(e){warn(`Failed loading excerpt for ${p.file}: ${e.message}`)}}))}
+const homeJump=()=>S.pb.has('the-journey-begins')?`<div class="home-jump"><a href="${S.pb.get('the-journey-begins').hash}">Jump to first post</a></div>`:'';
+function postArticle(p,x){return `<article><h2>${esc(x.title)}</h2><div class="meta"><time datetime="${escA(x.dateText)}">${esc(fdate(x.dateObj))}</time> by ${authorHtml(x.author)} <a class="permalink" href="${p.hash}" aria-label="Permalink to ${escA(x.title)}">Permalink</a></div>${tagHtml(x.tags)}<div>${x.html}</div></article>`}
+async function postCard(p){try{const x=await loadPost(p);return postArticle(p,x)}catch(e){warn(`Failed loading post content for ${p.file}: ${e.message}`);return `<article><h2>${esc(p.title)}</h2><div class="meta"><time datetime="${escA(p.dateText)}">${esc(fdate(p.dateObj))}</time> by ${authorHtml(p.author)} <a class="permalink" href="${p.hash}" aria-label="Permalink to ${escA(p.title)}">Permalink</a></div>${tagHtml(p.tags)}<p>${esc(p.excerpt||'')}</p></article>`}}
+const pager=(pg,total)=>total<=1?'':`<nav class="pager" aria-label="Pagination">${pg>1?`<a href="#/?page=${pg-1}">Newer entries</a>`:'<span></span>'}<span>Page ${pg} of ${total}</span>${pg<total?`<a href="#/?page=${pg+1}">Older entries</a>`:'<span></span>'}</nav>`;
+async function home(q){const raw=Number(q.get('page')||'1'),total=Math.max(1,Math.ceil(S.posts.length/CFG.perPage)),pg=clamp(Number.isFinite(raw)?raw:1,1,total),start=(pg-1)*CFG.perPage,show=S.posts.slice(start,start+CFG.perPage);const cards=show.length?(await Promise.all(show.map(postCard))).join(''):'<p>No posts yet.</p>';setMain(`<section>${warnBox()}${homeJump()}${cards}${pager(pg,total)}</section>`,'Home')}
+async function post(sl){const p=S.pb.get(nslug(dec(sl||'')));if(!p){setMain('<section class="box err"><h2>Post not found</h2><p>Check the URL or manifest.</p></section>','Not Found');return}
+  let x;try{x=await loadPost(p)}catch(e){setMain(`<section class="box err"><h2>Unable to load post</h2><p>${esc(e.message)}</p></section>`,'Error');return}
+  const i=S.posts.findIndex(z=>z.slug===p.slug),newer=i>0?S.posts[i-1]:null,older=i>=0&&i<S.posts.length-1?S.posts[i+1]:null;
+  const cm=commentCfg('post',p,x.title,x.comments);
+  setMain(`${postArticle(p,x)}<nav class="adj" aria-label="Adjacent posts">${older?`<a href="${older.hash}"><small>Older post</small>${esc(older.title)}</a>`:'<div class="none"><small>Older post</small>None</div>'}${newer?`<a href="${newer.hash}"><small>Newer post</small>${esc(newer.title)}</a>`:'<div class="none"><small>Newer post</small>None</div>'}</nav>${cm?commentBox(cm):CFG.commentNote?`<p class="meta">${esc(CFG.commentNote)}</p>`:''}`,x.title);
+  await mountComments(cm)
+}
+async function page(sl){const g=S.gb.get(nslug(dec(sl||'')));if(!g){setMain('<section class="box err"><h2>Page not found</h2><p>Check pages/pages.json and URL.</p></section>','Not Found');return}
+  let x;try{x=await loadPage(g)}catch(e){setMain(`<section class="box err"><h2>Unable to load page</h2><p>${esc(e.message)}</p></section>`,'Error');return}
+  const cm=commentCfg('page',g,x.title,x.comments);
+  const jump=g.slug==='about'?homeJump():'';
+  const body=cm&&cm.variant==='guestbook'
+    ? `<section class="guestbook-page"><article><h1>${esc(x.title)}</h1><div>${x.html}</div>${jump}</article>${commentBox(cm)}</section>`
+    : `<article><h1>${esc(x.title)}</h1><div>${x.html}</div>${jump}</article>${commentBox(cm)}`;
+  setMain(body,x.title);
+  await mountComments(cm)
+}
+function pages(){setMain(`<section><h1>Pages</h1>${S.pages.length?`<ul class="list">${S.pages.map(g=>`<li><a href="${g.hash}">${esc(g.title)}</a></li>`).join('')}</ul>`:'<p>No static pages listed in pages.json.</p>'}</section>`,'Pages')}
+function arch(){const years=[...S.arc.keys()].sort((a,b)=>b.localeCompare(a));if(!years.length){setMain('<section><h1>Archive</h1><p>No posts yet.</p></section>','Archive');return}
+  const html=years.map(y=>{const n=S.arc.get(y),ms=[...n.months.keys()].sort((a,b)=>b.localeCompare(a));return `<section><h2><a href="#/archive/${y}">${y}</a> (${n.posts.length})</h2><ul>${ms.map(m=>`<li><a href="#/archive/${y}/${m}">${esc(fmonth(m))}</a> (${n.months.get(m).length})</li>`).join('')}</ul></section>`}).join('');setMain(`<section><h1>Archive</h1>${html}</section>`,'Archive')}
+function archYear(y){y=String(y||'').trim();const n=S.arc.get(y);if(!n){setMain(`<section class="box err"><h2>Archive not found</h2><p>No posts for year ${esc(y)}.</p></section>`,'Archive');return}
+  const ms=[...n.months.keys()].sort((a,b)=>b.localeCompare(a)),html=ms.map(m=>`<section><h3><a href="#/archive/${y}/${m}">${esc(fmonth(m))}</a></h3><ul class="list">${n.months.get(m).map(p=>`<li><a href="${p.hash}">${esc(p.title)}</a> <time class="meta" datetime="${escA(p.dateText)}">${esc(fdate(p.dateObj))}</time></li>`).join('')}</ul></section>`).join('');setMain(`<section><h1>Archive: ${esc(y)}</h1>${html}</section>`,`Archive ${y}`)}
+function archMonth(y,m){y=String(y||'').trim();m=String(m||'').padStart(2,'0');const n=S.arc.get(y),ps=n?n.months.get(m):null;if(!ps||!ps.length){setMain(`<section class="box err"><h2>Archive not found</h2><p>No posts for ${esc(y+'-'+m)}.</p></section>`,'Archive');return}
+  setMain(`<section><h1>Archive: ${esc(fmonth(m)+' '+y)}</h1><ul class="list">${ps.map(p=>`<li><a href="${p.hash}">${esc(p.title)}</a> <time class="meta" datetime="${escA(p.dateText)}">${esc(fdate(p.dateObj))}</time></li>`).join('')}</ul></section>`,`Archive ${y}-${m}`)}
+function tags(){const a=[...S.tags.values()].sort((x,y)=>x.label.localeCompare(y.label));setMain(`<section><h1>Tags</h1>${a.length?`<ul class="list">${a.map(t=>`<li><a href="${th(t.label)}">#${esc(t.label)}</a> (${t.posts.length})</li>`).join('')}</ul>`:'<p>No tags found.</p>'}</section>`,'Tags')}
+function tag(sl){const lbl=dec(sl||''),n=S.tags.get(lbl.toLowerCase());if(!n){setMain(`<section class="box err"><h2>Tag not found</h2><p>No posts tagged with "${esc(lbl)}".</p></section>`,'Tag');return}
+  setMain(`<section><h1>Tag: #${esc(n.label)}</h1><ul class="list">${n.posts.map(p=>`<li><a href="${p.hash}">${esc(p.title)}</a> <time class="meta" datetime="${escA(p.dateText)}">${esc(fdate(p.dateObj))}</time></li>`).join('')}</ul></section>`,`Tag ${n.label}`)}
+function authors(){const a=[...S.authors.values()].sort((x,y)=>x.label.localeCompare(y.label));setMain(`<section><h1>Authors</h1>${a.length?`<ul class="list">${a.map(v=>`<li><a href="${ah(v.label)}">${esc(v.label)}</a> (${v.posts.length})</li>`).join('')}</ul>`:'<p>No authors found.</p>'}</section>`,'Authors')}
+function author(sl){const lbl=dec(sl||''),n=S.authors.get(lbl.toLowerCase());if(!n){setMain(`<section class="box err"><h2>Author not found</h2><p>No posts by "${esc(lbl)}".</p></section>`,'Author');return}
+  setMain(`<section><h1>Author: ${esc(n.label)}</h1><ul class="list">${n.posts.map(p=>`<li><a href="${p.hash}">${esc(p.title)}</a> <time class="meta" datetime="${escA(p.dateText)}">${esc(fdate(p.dateObj))}</time></li>`).join('')}</ul></section>`,`Author ${n.label}`)}
+const ere=s=>String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const hlt=(txt,terms)=>{let r=esc(txt);for(const t of [...new Set(terms.filter(Boolean))].sort((a,b)=>b.length-a.length))r=r.replace(new RegExp(`(${ere(t)})`,'ig'),'<mark>$1</mark>');return r};
+const snip=(txt,terms)=>{txt=String(txt||'');if(!txt)return'';if(!terms.length)return excerpt(txt,160);const lo=txt.toLowerCase();let i=-1;for(const t of terms){const p=lo.indexOf(t);if(p!==-1&&(i===-1||p<i))i=p}if(i===-1)return excerpt(txt,160);const s=Math.max(0,i-70),e=Math.min(txt.length,i+100);return`${s?'...':''}${txt.slice(s,e).trim()}${e<txt.length?'...':''}`};
+async function buildSearch(){if(S.searchReady)return;const idx=[];for(const p of S.posts){try{const x=await loadPost(p);idx.push({kind:'post',title:x.title,titleL:x.title.toLowerCase(),tags:x.tags,tagsL:x.tags.join(' ').toLowerCase(),body:x.text,bodyL:x.text.toLowerCase(),hash:p.hash,date:x.dateObj.getTime()})}catch(e){warn(`Search index skipped post ${p.file}: ${e.message}`)}}for(const g of S.pages){try{const x=await loadPage(g);idx.push({kind:'page',title:x.title,titleL:x.title.toLowerCase(),tags:[],tagsL:'',body:x.text,bodyL:x.text.toLowerCase(),hash:g.hash,date:0})}catch(e){warn(`Search index skipped page ${g.file}: ${e.message}`)}}S.search=idx;S.searchReady=true}
+function doSearch(q,tag){const terms=q.toLowerCase().split(/\s+/).map(s=>s.trim()).filter(Boolean),tf=tag.trim().toLowerCase(),res=[];for(const it of S.search){if(tf&&!it.tagsL.includes(tf))continue;let ok=true,sc=0;for(const t of terms){const a=it.titleL.includes(t),b=it.tagsL.includes(t),c=it.bodyL.includes(t);if(!(a||b||c)){ok=false;break}sc+=a?6:0;sc+=b?4:0;sc+=c?1:0}if(!terms.length&&!tf)ok=false;if(ok)res.push({it,sc})}return res.sort((a,b)=>b.sc-a.sc||b.it.date-a.it.date||a.it.title.localeCompare(b.it.title))}
+async function search(qs){const q=String(qs.get('q')||'').trim(),tf=String(qs.get('tag')||'').trim();D.q.value=q;if(!q&&!tf){setMain('<section><h1>Search</h1><p>Use the search box to filter posts by title, tags, or body text.</p></section>','Search');return}
+  setMain('<section><h1>Search</h1><p class="box">Building search index...</p></section>','Search');await buildSearch();const rs=doSearch(q,tf),terms=q.toLowerCase().split(/\s+/).filter(Boolean),head=[q?`query "${esc(q)}"`:'',tf?`tag "${esc(tf)}"`:'' ].filter(Boolean).join(' and ');
+  const body=!rs.length?'<p>No matches found.</p>':rs.map(({it})=>`<article><h2><a href="${it.hash}">${hlt(it.title,terms)}</a></h2><div class="meta">${it.kind==='post'?'Post':'Page'}</div>${snip(it.body,terms)?`<p>${hlt(snip(it.body,terms),terms)}</p>`:''}${it.tags.length?tagHtml(it.tags):''}</article>`).join('');
+  setMain(`<section><h1>Search</h1>${head?`<p>${head}</p>`:''}${body}${warnBox()}</section>`,'Search')
+}
+async function rssXML(){const ps=S.posts.slice(0,CFG.rssItems);await ensureEx(ps);const base=baseUrl(),ch=base?base+'/#/':'#/';const items=[];for(const p of ps){let x=null;try{x=await loadPost(p)}catch{}const title=x?x.title:p.title,desc=x?x.excerpt:(p.excerpt||''),link=base?`${base}/#/post/${encodeURIComponent(p.slug)}`:ph(p.slug),pub=(x?x.dateObj:p.dateObj).toUTCString();let content='';if(CFG.rssFull&&x&&x.html)content=`<content:encoded><![CDATA[${x.html.replace(/]]>/g,']]]]><![CDATA[>')}]]></content:encoded>`;items.push(`<item><title>${xesc(title)}</title><link>${xesc(link)}</link><guid>${xesc(link)}</guid><pubDate>${xesc(pub)}</pubDate><description>${xesc(desc)}</description>${content}</item>`)}
+  return `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>${xesc(CFG.siteTitle)}</title><link>${xesc(ch)}</link><description>${xesc(CFG.siteDescription)}</description><lastBuildDate>${xesc(new Date().toUTCString())}</lastBuildDate>${items.join('')}</channel></rss>`
+}
+async function feedExport(){const xml=await rssXML();if(S.feedUrl){URL.revokeObjectURL(S.feedUrl);S.feedUrl=null}S.feedUrl=URL.createObjectURL(new Blob([xml],{type:'application/rss+xml;charset=utf-8'}));const hint=baseUrl()?'<p>The public site feed should live at <code>/feed.xml</code>. Use this page only as a fallback export tool if you need to rebuild it manually in the browser.</p>':'<p>When opened locally, this can still export a portable <code>feed.xml</code> file as a fallback.</p>';
+  setMain(`<section><h1>RSS Export</h1>${hint}<p><a href="${feedHref()}">Open published feed.xml</a></p><p><a href="${S.feedUrl}" download="feed.xml">Download generated feed.xml</a></p></section>`,'Feed export')}
+function notFound(){setMain('<section class="box err"><h1>Not found</h1><p>The requested route does not exist.</p></section>','Not Found')}
+async function run(){const r=route(),s=r.seg[0]||'';if(!s)return home(r.q);if(s==='post')return post(r.seg[1]);if(s==='page')return page(r.seg[1]);if(s==='pages')return pages();if(s==='archive'){if(!r.seg[1])return arch();if(!r.seg[2])return archYear(r.seg[1]);return archMonth(r.seg[1],r.seg[2])}if(s==='tags')return tags();if(s==='tag')return tag(r.seg[1]);if(s==='authors')return authors();if(s==='author')return author(r.seg[1]);if(s==='search')return search(r.q);if(s==='feed.xml'||s==='feed'){location.replace(feedHref());return}if(s==='feed-export')return feedExport();return notFound()}
+function applyTheme(v){const pref=['light','dark','auto'].includes(v)?v:'auto';localStorage.setItem('portable-blog-theme',pref);const eff=pref==='auto'?(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):pref;document.documentElement.setAttribute('data-theme',eff);if(CFG.themeToggle){const next=pref==='light'?'dark':pref==='dark'?'auto':'light';D.theme.textContent='Theme: '+pref[0].toUpperCase()+pref.slice(1);D.theme.dataset.next=next;D.theme.hidden=false}else D.theme.hidden=true}
+function showLocal(msg){if(location.protocol!=='file:')return;D.local.hidden=false;D.localMsg.textContent=msg}function hideLocal(){D.local.hidden=true}
+async function initFetch(){await loadManifests();hideLocal();drawNav();await run()}
+async function localPick(ev){const fs=[...(ev.target.files||[])];if(!fs.length)return;const m=new Map();for(const f of fs)regLocal(m,f.webkitRelativePath||f.name,f);S.local=m;try{await loadManifests();hideLocal();drawNav();await run()}catch(e){setMain(`<section class="box err"><h1>Local folder loaded, but manifests were not found</h1><p>Expected <code>${esc(CFG.postsManifest)}</code> and <code>${esc(CFG.pagesManifest)}</code> inside the selected folder.</p><p>${esc(e.message)}</p></section>`,'Error');showLocal('Select the folder that directly contains posts/, pages/, and index.html.')}}
+function bind(){addEventListener('hashchange',()=>run().catch(e=>setMain(`<section class="box err"><h1>Routing error</h1><p>${esc(e.message)}</p></section>`,'Error')));
+  D.form.addEventListener('submit',e=>{e.preventDefault();const v=D.q.value.trim();location.hash=v?`#/search?q=${encodeURIComponent(v)}`:'#/search'});
+  D.theme.addEventListener('click',()=>applyTheme(D.theme.dataset.next||'auto'));
+  if(window.matchMedia)window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{if((localStorage.getItem('portable-blog-theme')||'auto')==='auto')applyTheme('auto')});
+  D.pick.addEventListener('click',()=>D.dir.click());D.dir.addEventListener('change',e=>localPick(e).catch(er=>setMain(`<section class="box err"><h1>Local folder error</h1><p>${esc(er.message)}</p></section>`,'Error')))
+}
+async function init(){D.title.textContent=CFG.siteTitle;D.desc.textContent=CFG.siteDescription;D.foot.textContent='All trademarks and copyrighted material belong to their respective owners.';bind();applyTheme(localStorage.getItem('portable-blog-theme')||'auto');drawNav();setMain('<section><h1>Loading...</h1><p>Reading manifests and content files.</p></section>','Loading');
+  try{await initFetch()}catch(e){const hint='Your browser may block local file reads from file://. Select the blog folder to continue, or run a tiny static server.';if(location.protocol==='file:'){showLocal(hint);setMain(`<section><h1>Local mode</h1><p class="box">${esc(hint)}</p></section>`,'Local Mode')}else setMain(`<section class="box err"><h1>Failed to load manifests</h1><p>${esc(e.message)}</p></section>`,'Error')}}
+init();
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
