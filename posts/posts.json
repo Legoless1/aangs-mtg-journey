@@ -198,13 +198,5 @@
     "file": "2025-11-15-the-journey-begins.md",
     "tags": ["TLA", "PTLA"],
     "author": "Legoless"
-  },
-  {
-    "title": "Hello World",
-    "date": "2025-11-13",
-    "slug": "hello-world",
-    "file": "2025-11-13-hello-world.md",
-    "tags": [""],
-    "author": "system"
   }
 ]
