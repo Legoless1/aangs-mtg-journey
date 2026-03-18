@@ -1,0 +1,11 @@
+﻿I have previously discussed art cards a couple times on this blog. I obtained the full set of twelve ATLE art cards when I opened [two Scene Boxes](#/post/merry-christmas) at Christmas, and I acquired a few from the ATLA set last month when I [cracked far too many Collector Boosters](#/post/collector-booster-box-opening). What I did not realise at the time was the true scope of this set.
+
+Art cards are non-playable collectibles, usually included as a possible pull in Collector Booster packs. They are enumerated on the back, with 54 cards in the ATLA series. What I have just discovered is that the ATLA cards actually come in two versions: the regular art card, and a rarer "Gold Signature" treatment. Similar to a prerelease stamp, these Gold Signature versions feature the artist's signature imprinted in gold. In circumstances where I guess the artist didn't provide their signature, a golden Planeswalker symbol is stamped on the card instead. These two versions don't seem to be properly documented on Scryfall; it currently only has scans of the Gold Signature cards.
+
+![ATLA search results on Scryfall](/assets/images/scryfall-atla.jpg){caption="Scryfall search results for ATLA only returns the Gold Signature versions"}
+
+This doubles the total number of ATLA cards in the grandmaster set, bringing the total number of art cards to 120. Just when I thought I had finalised my binder layout, I have had to reorganise it slightly to make room for these additional empty pockets. I compressed the prerelease section, leaving plenty of room at the back of the third binder in case I come across any more surprises.
+
+![Prerelease cards in a binder](/assets/images/binder-reshuffle-1.jpg){class=row-half caption="From a one-sided layout…"} ![Prerelease cards in a binder](/assets/images/binder-reshuffle-2.jpg){class=row-half caption="…to double-sided."}
+
+In other news, I'm now on 38 out of 80 prerelease promos. With Wan Shi Tong now under my belt, I believe I have obtained all the most expensive mythics. I've begun the process of slowly hunting down and ordering the rest. The first two prerelease lands have been slotted, so I might focus on tying down the rest of those next. Gonna have to wait till payday though.

@@ -1,0 +1,5 @@
+This is a project blog documenting the attempt to collect a complete *Magic: The Gathering — Avatar: The Last Airbender* Universes Beyond set. The goal is simple to state and difficult to execute: obtain one of every card in every treatment, including tokens, promotional cards, and non-playables such as art cards and front cards. This currently amounts to 1,726 distinct cards.
+
+For the purposes of this project, each printing is treated as a separate card. Where a card exists in multiple treatments—non-foil, traditional foil, extended art, stamped, raised foil, neon ink, or otherwise—each printing occupies its own place in the collection. The same applies to ancillary items that form part of the set's structure, such as helper cards and tutorial cards.
+
+Entries document the process of assembling the set: product openings, singles acquisition, distribution quirks, and the systems required to track and organise a collection of this scale. The project is not concerned with gameplay or deckbuilding, but with how the set is constructed and how it can be completed.

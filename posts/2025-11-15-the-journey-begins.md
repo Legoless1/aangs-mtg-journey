@@ -1,0 +1,7 @@
+﻿As someone who only occasionally plays *Magic: The Gathering* with friends, prerelease events are not my usual scene. Hearing that an *Avatar: The Last Airbender* expansion was launching this weekend tempted me to the extent that I messaged my LGS to see if there were any slots left for the Saturday event. To reserve a prerelease kit, I needed to have paid in-store earlier in the week; nevertheless, I was informed that there were still a few kits left. I rang a couple friends to see if anyone would go in with me (roped one guy in) and then drove into town through stormy weather only to be informed that all prerelease kits had been sold or reserved.
+
+We left the LGS dejected, with nothing to show for our time.
+
+However, this failure to acquire a single *Avatar* product awakened something in me: if my LGS wasn't going to facilitate the experience, I would simply have to recreate it on my own terms. After a quick eBay search and much deliberation, all five colours of prerelease kits are now on their way to me. Thirty packs, one kitchen table, and a strict reduction in wet gamer smells—the home prerelease begins soon.
+
+![Prerelease kits](/assets/images/prerelease-kits.jpg){caption="ALTA prerelease kits"}

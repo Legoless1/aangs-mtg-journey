@@ -1,0 +1,22 @@
+[
+  {
+    "title": "About",
+    "slug": "about",
+    "file": "about.md"
+  },
+  {
+    "title": "Acronyms",
+    "slug": "acronyms",
+    "file": "acronyms.md"
+  },
+  {
+    "title": "Grandmaster Set Checklist",
+    "slug": "grandmaster-set-checklist",
+    "file": "grandmaster-set-checklist.md"
+  },
+  {
+    "title": "Guestbook",
+    "slug": "guestbook",
+    "file": "guestbook.md"
+  }
+]
