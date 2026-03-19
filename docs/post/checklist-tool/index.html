@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Paper to JSON - Aang&#39;s MTG Journey</title>
+<meta name="description" content="A week ago, I found myself once again browsing the limited selection of singles in my LGS. I have begun to haunt that place in search of Avatar cards—maybe there aren&#39;t many being traded in, but it seems like they sell...">
+<link rel="canonical" href="https://legoless1.github.io/aangs-mtg-journey/post/checklist-tool/">
+<link rel="icon" href="../../assets/favicons/avatar-minimal.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../../assets/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="shortcut icon" href="../../assets/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="../../assets/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="../../assets/favicons/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Aang&#39;s MTG Journey RSS Feed" href="../../feed.xml">
+<meta name="theme-color" content="#1f5679">
+<meta property="og:site_name" content="Aang&#39;s MTG Journey">
+<meta property="og:title" content="From Paper to JSON">
+<meta property="og:description" content="A week ago, I found myself once again browsing the limited selection of singles in my LGS. I have begun to haunt that place in search of Avatar cards—maybe there aren&#39;t many being traded in, but it seems like they sell...">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://legoless1.github.io/aangs-mtg-journey/post/checklist-tool/"><meta property="og:image" content="https://legoless1.github.io/aangs-mtg-journey/assets/images/checklist-tool.png"><meta name="twitter:card" content="summary_large_image">
+<meta property="article:published_time" content="2026-03-02">
+<link rel="stylesheet" href="../../assets/site.css">
+<script defer src="../../assets/site.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <div class="identity">
+      <div class="brand">
+        <img id="siteLogo" class="inline-icon" src="../../assets/images/site-logo.svg" alt="Aang&#39;s MTG Journey logo">
+        <h1><a id="homeLink" href="../../index.html">Aang&#39;s MTG Journey</a></h1>
+      </div>
+      <p id="desc">Attempting to complete a full grandmaster set of Magic: The Gathering Avatar: The Last Airbender Universes Beyond cards.</p>
+    </div>
+    <button id="theme" type="button">Theme: Auto</button>
+  </div>
+  <nav id="nav"><a href="../../index.html">Home</a><a href="../../about/index.html">About</a><a href="../../guestbook/index.html">Guestbook</a><a href="../../pages/index.html">Pages</a><a href="../../archive/index.html">Archive</a><a href="../../tags/index.html">Tags</a><a href="../../feed.xml" class="nav-feed"><img class="inline-icon nav-feed-icon" src="../../assets/images/RSS.svg" alt="" aria-hidden="true"><span>Feed</span></a></nav>
+  <div id="pageLinks"></div>
+</header>
+<div class="search">
+  <form id="searchForm" role="search" action="../../search/index.html" method="get">
+    <input id="q" type="search" name="q" placeholder="Search title, tags, author, body" value="">
+    <button type="submit">Search</button>
+  </form>
+</div>
+<main id="app" tabindex="-1">
+<article><h1>From Paper to JSON</h1><div class="meta"><time datetime="2026-03-02">March 2, 2026</time> by <a href="../../author/legoless/index.html">Legoless</a> <a class="permalink" href="../../post/checklist-tool/index.html" aria-label="Permalink to From Paper to JSON">Permalink</a></div><div class="tags"><a class="pill" href="../../tag/structure/index.html">#Structure</a></div><div><p>A week ago, I found myself once again browsing the limited selection of singles in my LGS. I have begun to haunt that place in search of Avatar cards—maybe there aren&#39;t many being traded in, but it seems like they sell instantly. I can never seem to find any.</p>
+<p>As luck would have it, I found two on this occasion. To date, I have been tracking my collection using a <a href="https://setbinder.com/collecting/avatar-the-last-airbender" target="_blank" rel="noopener noreferrer">printed checklist</a> (external link) put together by Reddit user JonODonovan. This pen-and-paper solution worked pretty well for my long, floor-bound sessions spent sorting stacks of cards and organising three massive binders. It does not lend itself to digitised tracking very well. My solution has been to quickly take photos of these 28 A4 pages any time I&#39;m going anywhere in-person to trade.</p>
+<p>As it happens, my latest photos were not up-to-date. Both cards I purchased were duplicates. In a set of 1.7k cards, two dupes is a rounding error at most–but it felt like a gut punch. My system needed to be properly digitised.</p>
+<p>My initial solution was, naturally, an Excel spreadsheet. I don&#39;t actually have a Microsoft Office subscription, and I didn&#39;t necessarily want to use Google Sheets for hosting, so somehow I ended up creating an .ODS file in LibreOffice Calc. This exercise helped me define the list. Following my recent shock discovery of <a href="../../post/on-art-cards/index.html">54 additional art cards</a> I hadn&#39;t previously been tracking, the grand total finally came into view: 1,726 cards. That is my goal.</p>
+<p>Turns out spreadsheets are not exactly a web-friendly format (outside of Google Sheets), so I ultimately decided to create a static webpage instead. Behold, the <strong><a href="https://legoless1.github.io/mtg-avatar/" target="_blank" rel="noopener noreferrer">Grandmaster Set Checklist</a></strong>. This tool allows you to filter by set code, card number, card name, treatment, and ownership. It lists every <em>Avatar UB</em> card, playable and non-playable, in every extant treatment.</p>
+<figure class="img-wrap"><img src="../../assets/images/checklist-tool.png" alt="Checklist tool UI" loading="lazy" decoding="async"><figcaption>Screenshot of the checklist tool</figcaption></figure>
+<p>There is no account system; the tool is entirely client-side. Your checklist can be saved locally as a .JSON file to keep track of what cards you own. In fact, this tool can be run completely offline if you want to download the contents of the website from the <a href="https://github.com/Legoless1/mtg-avatar" target="_blank" rel="noopener noreferrer">GitHub repo</a> (external link).</p>
+<p>After painstakingly ticking each box in my new tool, I finally landed on a number my A4 sheets had never revealed to me: 982 / 1726 (56.9%). I&#39;m officially past the halfway point. Before today, my collection was vibes-based; the physical collection was quantified in memory and paper notes. Digitalisation has collapsed that ambiguity into a list of 982 discrete, indexed, versioned print objects. It will take me a little while to recalibrate.</p>
+<p>Anyway, I won&#39;t be picking up duplicates next time I spontaneously decide to flip through a trade binder.</p></div></article><nav class="adj" aria-label="Adjacent posts"><a href="../../post/on-art-cards/index.html"><small>Older post</small>On Art Cards</a><a href="../../post/capture-avatar-honour/index.html"><small>Newer post</small>I must capture the Avatar to restore my honour</a></nav><p class="meta">Want to leave a note? Use the Guestbook page.</p>
+</main>
+<footer id="foot">All trademarks and copyrighted material belong to their respective owners.</footer>
+</div>
+</body>
+</html>
