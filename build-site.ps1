@@ -750,7 +750,7 @@ function Get-PrimaryImageSource([string]$Markdown) {
 function Join-SiteUrl([string]$Base, [string]$Path) {
   if ([string]::IsNullOrWhiteSpace($Base)) { return $Path }
   $siteBase = $Base.TrimEnd('/')
-  if (-not $Path) { return $siteBase }
+  if (-not $Path) { return ($siteBase + '/') }
   return ($siteBase + '/' + $Path.TrimStart('/'))
 }
 function Get-CanonicalUrl([string]$SiteUrl, [string]$WebPath) {
