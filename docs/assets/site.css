@@ -41,6 +41,13 @@ img{max-width:100%;height:auto;border-radius:8px;display:block;margin:1rem auto}
 .comments.comments-page{margin:1.4rem -1.3rem 0;padding:1.15rem 1.3rem 1.3rem;border-top:1px solid var(--line);background:linear-gradient(180deg,#9991,transparent 22%)}
 .comments.comments-page #cusdis_thread{min-height:clamp(32rem,78vh,64rem);border-radius:12px;overflow:hidden}
 .comments.comments-page #cusdis_thread iframe{display:block!important;width:100%!important;height:clamp(32rem,78vh,64rem)!important;min-height:32rem!important;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--card)!important}
+:root[data-theme='dark'] .comments #cusdis_thread{background:#d7dde5;color:#14181f;border:1px solid #808896;border-radius:12px;padding:.8rem}
+:root[data-theme='dark'] .comments #cusdis_thread a{color:#355f8b}
+:root[data-theme='dark'] .comments #cusdis_thread input,
+:root[data-theme='dark'] .comments #cusdis_thread textarea,
+:root[data-theme='dark'] .comments #cusdis_thread select{background:#f6f7f9!important;color:#14181f!important;border:1px solid #808896!important}
+:root[data-theme='dark'] .comments #cusdis_thread button{background:#f2ede2!important;color:#14181f!important;border:1px solid #808896!important}
+:root[data-theme='dark'] .comments #cusdis_thread iframe{background:#d7dde5!important}
 .box{border:1px solid var(--line);border-radius:10px;padding:.66rem .78rem;background:#9991;font:.9rem "Avenir Next","Segoe UI",sans-serif}
 .err{border-color:#a65a5a;background:#a65a5a1a}.warn{border-color:#a08442;background:#a084421a}
 #local{margin-top:.75rem}#local button{margin-top:.45rem;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:8px;padding:.45rem .68rem;cursor:pointer}
