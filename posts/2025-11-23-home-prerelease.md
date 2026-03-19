@@ -6,7 +6,7 @@ One week on from the official prerelease and I now had enough prerelease kits to
 
 What ensued was a pack-opening frenzy. Instead of building sealed decks immediately, we pooled all the packs and ran a draft: each pack was opened, a card chosen, and the rest passed around the table until everything had been picked.
 
-At the end, each player had a drafted pile of cards from which to build their deck. With only four players, most of the evening was spent cracking packs and shuffling through the resulting card piles. I went with a mono-green deck to try out the new Earthbend keyword actions. I ended up winning 1-0 during the single match we got to play. Unfortunately, nobody thought to bring spare lands, so the guys playing with multicoloured decks had to use a confusing token system instead. We'll figure it out during the next session.
+At the end, each player had a drafted pile of cards from which to build their deck. With only four players, most of the evening was spent cracking packs and shuffling through the resulting card piles. I went with a mono-green deck to try out the new Earthbend keyword action. I ended up winning 1-0 during the single match we got to play. Unfortunately, nobody thought to bring spare lands, so the guys playing with multicoloured decks had to use a confusing token system instead. We'll figure it out during the next session.
 
 The main highlight of the evening was getting to see which five prerelease promos were pulled. Each kit contained a single guaranteed rare or mythic foil with a 2025 date stamp. We pulled
 - #162 (Zhao, the Moon Slayer),
