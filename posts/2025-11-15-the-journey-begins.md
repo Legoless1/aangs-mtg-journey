@@ -4,4 +4,4 @@ We left the LGS dejected, with nothing to show for our time.
 
 However, this failure to acquire a single *Avatar* product awakened something in me: if my LGS wasn't going to facilitate the experience, I would simply have to recreate it on my own terms. After a quick eBay search and much deliberation, all five colours of prerelease kits are now on their way to me. Thirty packs, one kitchen table, and a strict reduction in wet gamer smells—the home prerelease begins soon.
 
-![Prerelease kits](/assets/images/prerelease-kits.jpg){caption="ALTA prerelease kits"}
+![Prerelease kits](/assets/images/prerelease-kits.jpg){caption="ATLA prerelease kits"}
