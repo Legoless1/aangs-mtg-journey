@@ -1457,18 +1457,21 @@ Write-Utf8File (Join-Path $OutputDir 'search-index.json') $searchIndexJson
 $rssPosts = @($posts | Select-Object -First $script:RssItems)
 $rssItems = foreach ($post in $rssPosts) {
   $link = Get-CanonicalUrl $script:SiteUrl ('post/{0}/' -f $post.Slug)
-  '<item><title>{0}</title><link>{1}</link><guid>{1}</guid><pubDate>{2}</pubDate><description>{3}</description></item>' -f `
+  $guid = if ($script:SiteUrl) { '{0}#post:{1}' -f (Get-CanonicalUrl $script:SiteUrl ''), $post.Slug } else { 'post:{0}' -f $post.Slug }
+  '<item><title>{0}</title><link>{1}</link><guid isPermaLink="false">{2}</guid><pubDate>{3}</pubDate><description>{4}</description></item>' -f `
     (XmlEscape $post.Title),
     (XmlEscape $link),
+    (XmlEscape $guid),
     (XmlEscape $post.DateObj.ToUniversalTime().ToString('r')),
     (XmlEscape $post.Excerpt)
 }
 $feedXml = @(
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<rss version="2.0">',
+  '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
   '<channel>',
   ('<title>{0}</title>' -f (XmlEscape $script:SiteTitle)),
   ('<link>{0}</link>' -f (XmlEscape (Get-CanonicalUrl $script:SiteUrl ''))),
+  ('<atom:link href="{0}" rel="self" type="application/rss+xml" />' -f (XmlEscape (Get-CanonicalUrl $script:SiteUrl 'feed.xml'))),
   ('<description>{0}</description>' -f (XmlEscape $script:SiteDescription)),
   ('<lastBuildDate>{0}</lastBuildDate>' -f (XmlEscape ([DateTime]::UtcNow.ToString('r')))),
   ($rssItems -join ''),
