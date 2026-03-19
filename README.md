@@ -15,6 +15,9 @@ If you change parsing/rendering behavior in `index.html`, update this file in th
   build-site.ps1
   index.html
   feed.xml
+  /site-root
+    google*.html
+    BingSiteAuth.xml
   /docs
   /posts
     posts.json
@@ -51,6 +54,7 @@ This rebuilds:
 - `docs/feed.xml`
 - `docs/sitemap.xml`
 - `docs/search-index.json`
+- any passthrough files from `site-root/` into the published site root
 - the root `feed.xml` convenience copy
 
 4. Publish `docs/`.
@@ -67,6 +71,7 @@ For GitHub Pages:
 
 - The published RSS feed lives at `docs/feed.xml`.
 - The builder also writes a synced copy to the project root as `feed.xml`.
+- Files placed in `site-root/` are copied into `docs/` unchanged. Use this for Google/Bing verification files or any other required root-level static files.
 - Rebuild it any time you add or edit posts by running:
 
 ```text
