@@ -2,7 +2,7 @@
 
 ![Three prerelease singles](/assets/images/prerelease-singles-3.jpg){class=row-half caption="Singles"} ![Five prerelease singles](/assets/images/prerelease-singles-4.jpg){class=row-half caption="…and more singles"}
 
-Unfortunately, this scattershot approach comes with its own set of risks beyond just the price of postage. I have finally had my first instance of a seller listing a card as a stamped prerelease promo, and sending the regular foil version instead.
+Alas, this scattershot approach comes with its own set of risks beyond just the price of postage. I have finally had my first instance of a seller listing a card as a stamped prerelease promo, and sending the regular foil version instead.
 
 These things happen. I'm sure most MTG players do not pay as much attention to card treatments as I do. That said, the foil version of this card is only worth 10c, so I requested a refund.
 
