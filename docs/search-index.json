@@ -1,6 +1,23 @@
 [
     {
         "kind":  "post",
+        "title":  "Total Recount",
+        "titleLower":  "total recount",
+        "url":  "../post/total-recount/index.html",
+        "date":  "2026-04-20",
+        "timestamp":  1776643200,
+        "tags":  [
+                     "TLE"
+                 ],
+        "tagsLower":  "tle",
+        "author":  "Legoless",
+        "authorLower":  "legoless",
+        "body":  "Someone beat me to it. Two weeks ago on April 5, Reddit user zellybelly1 posted a photo album showing off a 100% complete grandmaster set of Avatar UB cards. It took them 4 months and approx. $15,000 USD to obtain every card. Luckily, this project is not a race. I\u0027m hoping my own collection will come in at a much lower total cost given my slower rate of acquisition. Honestly, I\u0027m relieved to see someone else pull it off—it means this set is completable. More importantly, their binder has become a reference point for my own collection. Going through the photos carefully, something immediately stood out: the absence of 15 non foil TLE cards I had originally included in my total. My figure of 1,726 was wrong! There are in fact only 1,711 extant cards in this set once you remove the following non foils from the list: 210: Aang, Air Nomad 211: Aang\u0027s Defense 214: Appa, Aang\u0027s Companion 218: Sledding Otter Penguin 219: Sokka, Wolf Cove\u0027s Protector 220: Tundra Wall 221: Wolf Cove Villager 234: Capital Guard 238: Fire Nation Soldier 239: Fire Nation\u0027s Conquest 240: Iroh, Firebending Instructor 244: Warship Scout 245: Zhao, the Seething Flame 246: Zuko, Avatar Hunter 247: Zuko\u0027s Offense Scryfall does document this, in fairness, though it\u0027s easy to miss unless you already suspect something is off: \"The non tutorial printings of some cards from the Avatar Beginner Box\u0027s tutorial decks were only available in Collector\u0027s Boosters, making them foil only.\" This is similar to what we had seen previously with Earthbending Student, with the only difference being that Earthbending Student never got a tutorial card equivalent in non foil. In any case, I have updated the Grandmaster Checklist tool to exclude these non existent cards. This lower, truer total brings me to a clean 60% completion. I\u0027ll speak to some of my recent pickups in a separate post.",
+        "bodyLower":  "someone beat me to it. two weeks ago on april 5, reddit user zellybelly1 posted a photo album showing off a 100% complete grandmaster set of avatar ub cards. it took them 4 months and approx. $15,000 usd to obtain every card. luckily, this project is not a race. i\u0027m hoping my own collection will come in at a much lower total cost given my slower rate of acquisition. honestly, i\u0027m relieved to see someone else pull it off—it means this set is completable. more importantly, their binder has become a reference point for my own collection. going through the photos carefully, something immediately stood out: the absence of 15 non foil tle cards i had originally included in my total. my figure of 1,726 was wrong! there are in fact only 1,711 extant cards in this set once you remove the following non foils from the list: 210: aang, air nomad 211: aang\u0027s defense 214: appa, aang\u0027s companion 218: sledding otter penguin 219: sokka, wolf cove\u0027s protector 220: tundra wall 221: wolf cove villager 234: capital guard 238: fire nation soldier 239: fire nation\u0027s conquest 240: iroh, firebending instructor 244: warship scout 245: zhao, the seething flame 246: zuko, avatar hunter 247: zuko\u0027s offense scryfall does document this, in fairness, though it\u0027s easy to miss unless you already suspect something is off: \"the non tutorial printings of some cards from the avatar beginner box\u0027s tutorial decks were only available in collector\u0027s boosters, making them foil only.\" this is similar to what we had seen previously with earthbending student, with the only difference being that earthbending student never got a tutorial card equivalent in non foil. in any case, i have updated the grandmaster checklist tool to exclude these non existent cards. this lower, truer total brings me to a clean 60% completion. i\u0027ll speak to some of my recent pickups in a separate post.",
+        "excerpt":  "Someone beat me to it. Two weeks ago on April 5, Reddit user zellybelly1 posted a photo album showing off a 100% complete grandmaster set of Avatar UB cards. It took them 4 months and approx. $15,000 USD to obtain every..."
+    },
+    {
+        "kind":  "post",
         "title":  "The Cost of a Stamp",
         "titleLower":  "the cost of a stamp",
         "url":  "../post/cost-of-stamp/index.html",
