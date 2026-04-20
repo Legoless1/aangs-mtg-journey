@@ -1,10 +1,18 @@
 ﻿[
   {
+    "title": "Aluminium Acquired",
+    "date": "2026-04-20",
+    "slug": "aluminium-acquired",
+    "file": "2026-04-20-aluminium-acquired.md",
+    "tags": ["TTLA", "PTLA", "ATLA", "Art Cards"],
+    "author": "Legoless"
+  },
+  {
     "title": "Total Recount",
     "date": "2026-04-20",
     "slug": "total-recount",
     "file": "2026-04-20-total-recount.md",
-    "tags": ["TLE"],
+    "tags": ["TLE", "Structure"],
     "author": "Legoless"
   },
   {
