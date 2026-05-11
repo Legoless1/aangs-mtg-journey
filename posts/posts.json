@@ -1,5 +1,13 @@
 ﻿[
   {
+    "title": "A New Promo!",
+    "date": "2026-05-11",
+    "slug": "a-new-promo",
+    "file": "2026-05-11-a-new-promo.md",
+    "tags": ["TLA", "TLE", "JTLA", "PMEI", "Jumpstart", "Structure"],
+    "author": "Legoless"
+  },
+  {
     "title": "Aluminium Acquired",
     "date": "2026-04-20",
     "slug": "aluminium-acquired",
